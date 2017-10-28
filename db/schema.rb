@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028064455) do
+ActiveRecord::Schema.define(version: 20171028210549) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20171028064455) do
     t.text "description"
     t.string "name"
     t.string "lastname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
