@@ -1,0 +1,97 @@
+
+
+
+
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this 
+
+
+
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_area :lastname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :artnr %><br>
+    <%= f.text_field :artnr %>
+  </div>
+
+  
+<div class="field">
+  <%= f.label :description %><br>
+  <%= f.text_field :description %>
+</div>
+
+  
+
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+
+<% end %> from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+
+  
+<div class="field">
+  <%= f.label :color %><br>
+  <%= f.text_field :color %>
+</div>
+
+  
+<div class="field">
+  <%= f.label :price %><br>
+  <%= f.text_field :price %>
+</div>
+
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+
+
+<% end %>

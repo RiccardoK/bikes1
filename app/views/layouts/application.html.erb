@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bikes</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <header>
+     <div class="nav">
+      <ul>
+        <li class="home"><a class="active" href="/static_pages/index">Home</a></li>
+         <li class="products"><a  href="/products/">Products</a></li>
+        <li class="orders"><a  href="/orders/">Orders</a></li>
+        <li class="fixies"><a href="#">Fixies</a></li>
+        <li class="citybikes"><a href="#">Citybikes</a></li>
+        <li class="specialoffers"><a href="#">Special Offers</a></li>
+      </ul>
+    </div>
+    </header>
+  	
+    <%= yield %>
+
+
+    
+
+   <footer class="footer-d">
+
+      <div class="footer-right">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+      </div>
+
+      <div class="footer-left">
+
+        <p class="footer-links">
+          <a href="/static_pages/index">Home</a>
+          ·
+          <a href="/static_pages/about">About</a>
+          ·
+          <a href="/static_pages/contact">Contact</a>
+          ·
+          <a href="#">Faq</a>
+        </p>
+
+        <p>Berlin Bikes &copy; 2017</p>
+      </div>
+
+    </footer>
+
+  </body>
+</html>

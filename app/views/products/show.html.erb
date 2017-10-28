@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+
+<table width="100%">
+  <thead>
+    <tr>
+      <th><h3>Name</h3></th>
+      <th><h3>Description</h3></th>
+      <th><h3>Image url</h3></th>
+      <th><h3>Color</h3></th>
+     <!--  <th><h4>Price</h4></th> -->
+
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td class="p_name" width="20%"><%= @product.name %></td>
+        <td class="p_description" width="20%"><%= @product.description %></td>
+        <td class="p_image_url" width="20%"><%= image_tag(@product.image_url, class: "img-responsive") %></td>
+        <td class="p_color" width="20%"><%= @product.color %></td>
+        <td class="p_price" width="20%"><%= @product.price %></td>
+        <td>
+       <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %></td>
+      </tr>
+
+  </tbody>
+</table>

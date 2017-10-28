@@ -1,0 +1,148 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-stack:     Raleway,Open-sans,Arial,sans-serif;
+$primary-color: #333;
+
+body  {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+
+
+
+//nav {
+//  ul {
+//    margin: 0;
+//    padding: 0;
+//    list-style: none;
+//}
+
+// li { display: inline-block; }
+
+//  a {
+//    display: block;
+//  padding: 6px 12px;
+//    text-decoration: none;
+// }
+//}
+
+
+ 
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  font-family: Raleway,Open-sans,Arial,sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #005f5f;
+}
+ 
+.nav a.active {
+  background-color: #005f5f;
+  color: #fff;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+ 
+  .nav li {
+    float: left;
+  }
+  .nav ul {
+    overflow: auto;
+    width: 800px;
+    margin: 0 auto;
+  }
+  .nav {
+    background-color: #444;
+  }
+
+}
+ 
+
+.footer-d{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+
+	width: 100%;
+	text-align: left;
+	font: Raleway,Open-sans,Arial,sans-serif;
+  padding: 45px 50px;
+  //margin-top: 80px;
+
+}
+
+.footer-d .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer-d p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-d p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-d .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-d .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+
