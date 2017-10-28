@@ -1,32 +1,38 @@
-<p id="notice"><%= notice %></p>
+<section>
+  <div class="show">
+    <p id="notice"><%= notice %></p>
+    <div class="row">
+      <div class="col-lg-1">
 
+      </div>
+      <div class="col-lg-5">
+        <% if @product.image_url.present? %>
+          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url", style: "width: 80%;") %>
+        <% end %>
 
+        <div class="product-info">
 
+          <p><strong>Name:</strong>
+          <%= @product.name %></p>
 
+          <p><strong>Description:</strong>
+          <%= @product.description %></p>
 
-<table width="100%">
-  <thead>
-    <tr>
-      <th><h3>Name</h3></th>
-      <th><h3>Description</h3></th>
-      <th><h3>Image url</h3></th>
-      <th><h3>Color</h3></th>
-     <th><h3>Price</h3></th>
+          <p><strong>Color:</strong>
+          <%= @product.color %></p>
 
-      <th colspan="5"></th>
-    </tr>
-  </thead>
+          <p><strong>Price:</strong>
+          £<%= @product.price %></p>
 
-  <tbody>
-      <tr>
-        <td class="p_name" width="20%"><%= @product.name %></td>
-        <td class="p_description" width="20%"><%= @product.description %></td>
-        <td class="p_image_url" width="20%"><%= image_tag(@product.image_url, class: "img-responsive") %></td>
-        <td class="p_color" width="20%"><%= @product.color %></td>
-        <td class="p_price" width="20%"><%= @product.price %></td>
-        <td>
-      </tr>
-       <%= link_to 'Back', products_path, class:"btn btn-default" %>
+           <%= link_to 'Back', products_path, class:"btn btn-default" %>
 <%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default"%>
-  </tbody>
-</table>
+      
+
+        </div><!--product-info-->
+      </div><!--col-lg-6-->
+      <div class="col-lg-5">
+     
+      </div>
+    </div><!--row-->
+  </div><!--show-->
+</section>

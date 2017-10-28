@@ -1,5 +1,5 @@
 class AddDesciptionToOrders < ActiveRecord::Migration[5.1]
-  def change
+   def change
     add_column :orders, :description, :text
   end
 end

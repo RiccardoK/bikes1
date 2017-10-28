@@ -1,0 +1,19 @@
+<% cache order do %>
+
+	<div class="col-xs-12 col-sm-4 col-md-3">
+
+	        <div class="order_grid_box">
+		        <h3><%= link_to(order.name,order_path(order)) %></h3>
+		        <p><strong>Name: </strong><%= order.name %></p>
+		        <p><strong>Lastname: </strong>$<%= order.lastname %></p>
+		        <%= link_to ('<u>More Details</u>').html_safe, order_path(order) %>
+	    	</div>
+
+        <%= link_to 'Show /', order %>
+    	<%= link_to 'Edit /', edit_order_path(order) %>
+     	<%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+     	<br><br><br><br>
+
+	</div><!-- /col -->
+
+<% end %>
