@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,7 +11,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet"/>
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,19 +21,48 @@
 
   <body>
 
-    <header>
-     <div class="nav">
-      <ul>
-        <li class="home"><a class="active" href="/static_pages/index">Home</a></li>
-         <li class="products"><a  href="/products/">Products</a></li>
-        <li class="orders"><a  href="/orders/">Orders</a></li>
-        <li class="fixies"><a href="#">Fixies</a></li>
-        <li class="citybikes"><a href="#">Citybikes</a></li>
-        <li class="specialoffers"><a href="#">Special Offers</a></li>
-      </ul>
-    </div>
+  <header>
+  <nav class="nav navbar navbar-fixed-top">          
+    <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><%= link_to 'Home', root_path %></li>
+                
+                <li><%= link_to 'Products', products_path %></li>
+                <li><%= link_to 'Orders', orders_path %></li>
+           
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Über uns <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                     
+                  <li><%= link_to "About", static_pages_about_path %></li>                   
+                  <li><%= link_to "Contact", static_pages_contact_path %></li>
+                  <li><a href="#">Page 1-2</a></li>                  
+                  </ul>
+                </li>            
+              </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                      <li>
+                        <%= form_tag(products_path, method: "get", class: "navbar-form navbar-right") do %>
+                        <%= text_field_tag(:q, "", type: "text", class: "form-control", placeholder: "search text") %>
+                        <%= submit_tag("Search", class: "btn btn-primary") %>
+                        <% end %>
+                     </li>
+                  </ul>
+            </div>
+          </div>
+        </nav>
+        
     </header>
-  	
+    
     <%= yield %>
 
 
@@ -48,20 +79,10 @@
 
       </div>
 
-      <div class="footer-left">
-
-        <p class="footer-links">
-          <a href="/static_pages/index">Home</a>
-          ·
-          <a href="/static_pages/about">About</a>
-          ·
-          <a href="/static_pages/contact">Contact</a>
-          ·
-          <a href="#">Faq</a>
-        </p>
+     <div class="footer-copy">
 
         <p>Berlin Bikes &copy; 2017</p>
-      </div>
+     </div>
 
     </footer>
 

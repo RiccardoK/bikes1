@@ -11,7 +11,7 @@
       <th><h3>Description</h3></th>
       <th><h3>Image url</h3></th>
       <th><h3>Color</h3></th>
-     <!--  <th><h4>Price</h4></th> -->
+     <th><h3>Price</h3></th>
 
       <th colspan="5"></th>
     </tr>
@@ -25,9 +25,8 @@
         <td class="p_color" width="20%"><%= @product.color %></td>
         <td class="p_price" width="20%"><%= @product.price %></td>
         <td>
-       <%= link_to 'Edit', edit_product_path(@product) %> |
-    <%= link_to 'Back', products_path %></td>
       </tr>
-
+       <%= link_to 'Back', products_path, class:"btn btn-default" %>
+<%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default"%>
   </tbody>
 </table>

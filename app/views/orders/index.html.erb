@@ -6,19 +6,11 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% @orders.each do |order| %>
-      <div class="col-sm-2 col-md-6">
-  
-        <p><h3><%= order.name %></h3></p>
-        <p><h3><%= order.lastname %></h3></p>
-  
-
-        <%= link_to 'Show /', order %>
-
-       <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %><br><br><br><br>
-
-
-      </div><!-- /col -->
+     <% cache @orders do %>
+      <%= render @orders %>
     <% end %>
   </div>
 </div>
+
+
+  <button type="button" class="new_order" data-toggle="tooltip"  title="New Order"><%= link_to 'New Order', new_order_path %></button>
