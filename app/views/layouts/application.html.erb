@@ -30,7 +30,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
               </button>
-              <a class="navbar-brand" href="#">WebSiteName</a>
+              <a class="navbar-brand" href="#">BerlinBikeS</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
@@ -42,6 +42,17 @@
                   <li><%= link_to "Contact", static_pages_contact_path %></li>
                       
               </ul>
+                  <ul class="nav pull-right">
+                    <li>
+                    <% if user_signed_in? %>
+                      <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                    <% else %>
+                      <%= link_to('Login', new_user_session_path) %>
+                    <% end %>
+                    </li>
+                  </ul>
+
+
                   <ul class="nav navbar-nav navbar-right">
                       <li>
                         <%= form_tag(products_path, method: "get", class: "navbar-form navbar-right") do %>
