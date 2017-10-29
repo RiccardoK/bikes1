@@ -1,19 +1,27 @@
+<div class="container header">
+  <h1>Contact Us</h1>
+  <%= flash[:notice] %>
 
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+    <%= form_tag("/static_pages/thank_you") do %>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form">
+        <div class="form-group">
+          <%= label_tag :name %>
+          <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name", required: "true"%>
+        </div><!--name-->
+        <div class="form-group">
+          <%= label_tag :email, "Email Address" %>
+          <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email", required: "true", type: "email" %>
+        </div><!--email-->
+        <div class="form-group">
+          <%= label_tag :message %>
+          <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message", required: "true" %>
 
-
-<h1>contact für bikes</h1>
-
-	
-			<tr>
-				<th>You can find us</th>
-				<th>Street</th>
-				<th>City</th>
-			</tr>
-	<br>
-	
-
-
-
-<!--<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>-->
+          <button class="btn  btn-default" style="border: none; margin-top: 1em;">
+          <%= submit_tag "Send", class: 'btn btn-default', style: 'border: none' %>
+          </button>
+        <% end %>
+      </div><!--message-->
+    </div><!--div-->
+  </div><!--row-->
+</div><!--container header-->
