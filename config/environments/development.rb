@@ -59,7 +59,7 @@ config.action_mailer.smtp_settings = {
   port:                 587,
   domain:               'gmail.com',
   user_name:            'peter.testuro@gmail.com',
-  password:             'geheim01',
+  password:             '',
   authentication:       :plain,
   enable_starttls_auto: true
 }
