@@ -10,6 +10,7 @@ body  {
   color: $primary-color;
   padding-top: 70px;
   padding-bottom : 60px;
+
 }
 
 .product_grid_box {
@@ -26,7 +27,7 @@ body  {
 .frame-image{border : 1px solid grey}
 
 .navbar {
-   background-color: #444;
+   background-color: #101010;
 
 }
  
@@ -47,7 +48,10 @@ body  {
   
 color : #fff;
 }
+.form-signin-heading, form-signin-heading{
+  text-align: center
 
+}
 
 
 .footer-d 
@@ -57,7 +61,7 @@ position:fixed;
    bottom:0px;
    //height:40px;
    width:100%;
-   background-color: #333;
+   background-color: #101010;
    //background-color:  #33383b;
 padding: 10px 50px;
 
