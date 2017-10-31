@@ -90,16 +90,16 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
+config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'gmail.com',
+  user_name:            'peter.testuro@gmail.com',
+  password:             'geheim01',
+  authentication:       :plain,
+  enable_starttls_auto: true
+}
 
-#  ActionMailer::Base.smtp_settings = {
-#   :address => 'smtp.sendgrid.net',
-#   :port => '587',
-#   :authentication => :plain,
-#   :user_name => ENV['SENDGRID_USERNAME'],
-#   :password => ENV['SENDGRID_PASSWORD'],
-#   :domain => 'heroku.com',
-#   :enable_starttls_auto => true
-# }
 
 
 config.action_mailer.default_url_options = { :host => 'https://bikesdemo.herokuapp.com/'}
