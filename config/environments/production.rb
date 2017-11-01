@@ -90,15 +90,15 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'gmail.com',
-  user_name:            'peter.testuro@gmail.com',
-  password:             'geheim01',
-  authentication:       :plain,
-  enable_starttls_auto: true
-}
+# config.action_mailer.smtp_settings = {
+#   address:              'smtp.gmail.com',
+#   port:                 587,
+#   domain:               'gmail.com',
+#   user_name:            'peter.testuro@gmail.com',
+#   password:             'geheim01',
+#   authentication:       :plain,
+#   enable_starttls_auto: true
+# }
 
 
 
