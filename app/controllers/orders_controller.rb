@@ -21,11 +21,11 @@ end
 
 
 
-  # GET /orders
-  # GET /orders.json
-#   def index
-#     @orders = Order.all
-#   end
+#   # GET /orders
+#   # GET /orders.json
+#    def index
+#    @orders = Order.all
+#    end
 
 #   # GET /orders/1
 #   # GET /orders/1.json
@@ -37,9 +37,7 @@ end
 #     @order = Order.new
 #   end
 
-#   # GET /orders/1/edit
-#   def edit
-#   end
+  
 
 #   # POST /orders
 #   # POST /orders.json
