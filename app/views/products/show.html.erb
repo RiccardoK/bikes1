@@ -3,11 +3,10 @@
     <p id="notice"><%= notice %></p>
     <div class="row">
       <div class="col-lg-1">
-
       </div>
       <div class="col-lg-5">
         <% if @product.image_url.present? %>
-          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url", style: "width: 100%;") %>
+          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url", style: "width: 50%; heigth: 50%;") %>
         <% end %>
 
         <div class="product-info">
