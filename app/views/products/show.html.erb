@@ -1,13 +1,15 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
 
-  <div class="row">
-    <div class=" col-md-4">
+  <div class="row product_show" data-product-id="<%= @product.id %>">
 
+    <div class="col-md-6 col-xs-12 product_show_img">
+      <%= image_tag(@product.image_url, data_zoom_image: image_path(@product.image_url), class: "image-responsive") %>
+    </div>
 
-          <%= image_tag @product.image_url, class: 'img-responsive' %>
-        </div>
-            <p>
+      <div class="caption col-md-6 col-xs-12 product_show_description">
+        <% cache @product do %>
+          <p>
             <strong>Name:</strong>
             <%= @product.name %>
           </p>
@@ -16,53 +18,38 @@
             <strong>Description:</strong>
             <%= @product.description %>
           </p>
+        <% end %>
+        <p>
+          <strong>Color:</strong>
+          <%= @product.color %>
+        </p>
 
-          <p>
-            <strong>Color:</strong>
-            <%= @product.color %>
-          </p>
+        <p>
+          <strong>Price</strong>
+          <%= @product.price%>
+        </p>
+        
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+        
+         <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
 
-          <p>
-            <strong>Price:</strong>
-            <%= @product.price %>
-          </p>
-        <div class="caption">
-          
+      </div><!-- end col 8-->
+    </div><!-- end col 4-->
 
-          <p>Average Rating: <div class="rated stars" data-score="<%= @product.average_rating %>"></div> </p>
+  
+      <div class="product_show_reviews">
+      
+      <%= render 'new_comment' %>
+        
+        <h4>Reviews:</h4>
+    
 
-          <% if signed_in? %>
-              <h4>Add a review:</h4>
-              <%= form_for([@product, @product.comments.build]) do |f| %>
-                  <p>
-                    <%= f.label :body, "Comments" %><br>
-                    <%= f.text_area :body %>
-                  </p>
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+      <%= render 'comments' %>
+      </div>
 
-                  <p>
-                  <div class="rating"></div>
-                  </p>
-
-                  <p>
-                    <%= f.submit "Submit" %>
-                  </p>
-              <% end %>
-          <% end %>
-
-
-
-          <%= render 'new_comment' %>
-          <%= render 'comments' %>
-
-
-<!--         </div>
- -->      <!--</div>-->
-    </div>
-  </div>
-
-
-
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
+ <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
 
 </div>
