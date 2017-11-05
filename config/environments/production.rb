@@ -100,7 +100,7 @@ config.action_mailer.smtp_settings = {
   authentication:       :plain,
   enable_starttls_auto: true
 }
-=======
+
 # config.action_mailer.smtp_settings = {
 #   address:              'smtp.gmail.com',
 #   port:                 587,
@@ -110,7 +110,7 @@ config.action_mailer.smtp_settings = {
 #   authentication:       :plain,
 #   enable_starttls_auto: true
 # }
->>>>>>> comments_new
+
 
 
 
