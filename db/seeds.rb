@@ -8,4 +8,5 @@
 
 
 
-Order.create(user_id: "1", product_id: "1", description: "ood product, price ok", total: "100.00")
+Comment.create(user_id: "1", product_id: "2", body: "odescr. 2 orders", rating: "10")
+Comment.create(user_id: "2", product_id: "2", body: "odescr. 2 orders", rating: "10")

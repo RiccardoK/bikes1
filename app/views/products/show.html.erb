@@ -1,38 +1,55 @@
-<section>
-  <div class="show">
-    <p id="notice"><%= notice %></p>
-    <div class="row">
-      <div class="col-lg-1">
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-      </div>
-      <div class="col-lg-5">
-        <% if @product.image_url.present? %>
-          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url", style: "width: 100%;") %>
+  <div class="row product_show" data-product-id="<%= @product.id %>">
+
+    <div class="col-md-6 col-xs-12 product_show_img">
+      <%= image_tag(@product.image_url, data_zoom_image: image_path(@product.image_url), class: "image-responsive") %>
+    </div>
+
+      <div class="caption col-md-6 col-xs-12 product_show_description">
+        <% cache @product do %>
+          <p>
+            <strong>Name:</strong>
+            <%= @product.name %>
+          </p>
+
+          <p>
+            <strong>Description:</strong>
+            <%= @product.description %>
+          </p>
         <% end %>
+        <p>
+          <strong>Color:</strong>
+          <%= @product.color %>
+        </p>
 
-        <div class="product-info">
+        <p>
+          <strong>Price</strong>
+          <%= @product.price%>
+        </p>
+        
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+        
+         <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
 
-          <p><strong>Name:</strong>
-          <%= @product.name %></p>
+      </div><!-- end col 8-->
+    </div><!-- end col 4-->
 
-          <p><strong>Description:</strong>
-          <%= @product.description %></p>
-
-          <p><strong>Color:</strong>
-          <%= @product.color %></p>
-
-          <p><strong>Price:</strong>
-          £<%= @product.price %></p>
-
-           <%= link_to 'Back', products_path, class:"btn btn-default" %>
-<%= link_to 'Edit', edit_product_path(@product), class:"btn btn-default"%>
+  
+      <div class="product_show_reviews">
       
+      <%= render 'new_comment' %>
+        
+        <h4>Reviews:</h4>
+    
 
-        </div><!--product-info-->
-      </div><!--col-lg-6-->
-      <div class="col-lg-5">
-     
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+      <%= render 'comments' %>
       </div>
-    </div><!--row-->
-  </div><!--show-->
-</section>
+
+ <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+
+</div>
