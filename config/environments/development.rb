@@ -54,27 +54,7 @@ Rails.application.configure do
    #config.file_watcher = ActiveSupport::EventedFileUpdateChecker
      config.app_generators.javascript_engine = :javascript
 
-<<<<<<< HEAD
-config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'gmail.com',
-  user_name:            'peter.testuro@gmail.com',
-  password:             '',
-  authentication:       :plain,
-  enable_starttls_auto: true
-}
-=======
-# config.action_mailer.smtp_settings = {
-#   address:              'smtp.gmail.com',
-#   port:                 587,
-#   domain:               'gmail.com',
-#   user_name:            'peter.testuro@gmail.com',
-#   password:             'geheim01',
-#   authentication:       :plain,
-#   enable_starttls_auto: true
-# }
->>>>>>> comments_new
+
 
 
 
