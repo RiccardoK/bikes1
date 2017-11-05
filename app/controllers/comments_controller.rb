@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
 
 private
 
-  def comment_params
+  def comment_params vfgdbd
     params.require(:comment).permit(:user_id, :body, :rating)
   end
 
