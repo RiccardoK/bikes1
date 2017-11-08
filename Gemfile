@@ -64,3 +64,4 @@ ruby "2.3.3"
 
 gem 'hirb'
 
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'

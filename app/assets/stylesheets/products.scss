@@ -5,7 +5,7 @@
 
 .img-responsive {
 
-  height: 80%;
+  width: auto;
   padding-top: 60px;
   margin: 20px;
 
@@ -14,7 +14,10 @@
 .product-info{
   padding-bottom: 100px;
 }
-
+.img-det{
+padding-right :100px;
+heith:100%;
+}
 
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.

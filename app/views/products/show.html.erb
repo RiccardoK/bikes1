@@ -3,11 +3,11 @@
 
   <div class="row product_show" data-product-id="<%= @product.id %>">
 
-    <div class="col-md-6 col-xs-12 product_show_img">
-      <%= image_tag(@product.image_url, data_zoom_image: image_path(@product.image_url), class: "image-responsive") %>
+    <div class="col-md-4 col-xs-12 product_show_img">
+      <%= image_tag(@product.image_url, class: "img-responsive img-det") %>
     </div>
 
-      <div class="caption col-md-6 col-xs-12 product_show_description">
+      <div class="caption col-md-8 col-xs-12 product_show_description">
         <% cache @product do %>
           <p>
             <strong>Name:</strong>
