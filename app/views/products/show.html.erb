@@ -49,6 +49,14 @@
       <%= render 'comments' %>
       </div>
 
+
+      <br>
+    <%= will_paginate @comments, previous_label: "Older", next_label: "Newer"%>
+    <br>
+    <br>
+
+
+
  <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %>
 
