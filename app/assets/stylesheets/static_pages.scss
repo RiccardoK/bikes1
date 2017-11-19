@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $font-stack:     Raleway,Open-sans,Arial,sans-serif;
-$primary-color: #333;
+$primary-color: #080808;
 
 body  {
   font: 100% $font-stack;
@@ -27,8 +27,12 @@ body  {
 .frame-image{border : 1px solid grey}
 
 .navbar {
-   background-color: #101010;
-
+   background-color: #080808;
+  font-family: Raleway,Open-sans,Arial,sans-serif;
+   font-size: 1.1em;
+}
+.navlog{
+  font-size: 1.1em;
 }
  
 .nav a {
@@ -36,11 +40,12 @@ body  {
   color: #fff;
   display: block;
   transition: .3s background-color;
+
 }
 
 .nav li {
   font-family: Raleway,Open-sans,Arial,sans-serif;
-  font-size: 1.2em;
+
    background-color: #444;
    color: #fff;
 }
@@ -61,7 +66,7 @@ position:fixed;
    bottom:0px;
    //height:40px;
    width:100%;
-   background-color: #101010;
+   background-color: #010101;
    //background-color:  #33383b;
 padding: 10px 50px;
 
