@@ -8,3 +8,10 @@ describe User do
     end
   end
 end
+
+describe User, type: :model do
+  it "should not validate users without an email address" do
+    @user = FactoryBot.build(:user, email: "not_an_email")
+    expect(@user).to_not be_valid
+  end
+end

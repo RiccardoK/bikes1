@@ -3,8 +3,11 @@ require 'rails_helper'
 describe UsersController, type: :controller do
 
   before do
-    @user1 = User.create!(first_name: "Jack", last_name: "Black", email: "jackblack@gmail.com", password: "123456", admin: false)
-    @user2 = User.create!(first_name: "Maggi", last_name: "Magenta", email: "magmag@gmail.com", password: "567891", admin: true)
+   # @user1 = User.create!(first_name: "Jack", last_name: "Black", email: "jackblack@gmail.com", password: "123456", admin: false)
+   # @user2 = User.create!(first_name: "Maggi", last_name: "Magenta", email: "magmag@gmail.com", password: "567891", admin: true)
+   @user1 = FactoryBot.create(:user)
+      @user2 = FactoryBot.create(:user)
+
   end
 
   describe 'GET #show' do
