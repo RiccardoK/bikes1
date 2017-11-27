@@ -4,7 +4,7 @@ describe UsersController, type: :controller do
 
   before do
     @user1 = User.create!(first_name: "Jack", last_name: "Black", email: "jackblack@gmail.com", password: "123456", admin: false)
-    @user2 = User.create!(first_name: "Maggi", last_name: "Magenta", email: "mag´mag@gmail.com", password: "567891", admin: true)
+    @user2 = User.create!(first_name: "Maggi", last_name: "Magenta", email: "magmag@gmail.com", password: "567891", admin: true)
   end
 
   describe 'GET #show' do
@@ -23,6 +23,7 @@ describe UsersController, type: :controller do
 
       it 'other users profile restricted' do
         get :show, params: { id: @user2.id }
+        expect(response).to have_http_status(302)
         expect(response).to redirect_to(root_path)
       end
       
@@ -30,7 +31,7 @@ describe UsersController, type: :controller do
 
      context 'No user is logged in' do
        it 'redirects to login' do
-         get :show, params: { id: @user1.id }
+         get :show, params: { id: @user2.id }
          expect(response).to redirect_to(new_user_session_path)
        end
      end
