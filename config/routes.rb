@@ -31,12 +31,14 @@ devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' 
   end
   
   resources :users
-
+  resources :payments
+  
   get 'static_pages/about'
   get 'static_pages/contact'
   get 'static_pages/index'
   post 'static_pages/thank_you'
-
+  post 'payments/create'
+  get 'payments/create'
 
   resources :orders
 

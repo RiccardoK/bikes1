@@ -94,7 +94,7 @@ padding: 10px 50px;
   margin-left: 3px;
 }
 .footer-copy{
-  font: Raleway,Open-sans,Arial,sans-serif;
+  font-family: Raleway,Open-sans,Arial,sans-serif;
   color:#ffffff;
   font-size:18px;
   color:  #ffffff;
@@ -103,4 +103,24 @@ padding: 10px 50px;
 }
 .footer a:hover {
   background-color: #005f5f;
+}
+
+/* Payment */
+.payment_page {
+
+ 
+  background-color: #33383b;
+  }
+
+.done_purchasemessage {
+  background: radial-gradient(white, #d3d3d3);
+  text-align: center;
+  height: 500px;
+  padding-top: 25px;
+  border-radius: 15px;
+}
+.create_text {
+  color: #fff;
+  font-family: Raleway,Open-sans,Arial,sans-serif;
+  font-size: 1.3em;
 }
