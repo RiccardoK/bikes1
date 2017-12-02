@@ -1,5 +1,5 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
+
 
   <div class="row product_show" data-product-id="<%= @product.id %>">
 
@@ -33,7 +33,7 @@
         <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
         
       
-          <%= form_tag(url: '/payments/create') do |form| %>
+          <%= form_tag('/payments/create') do |form| %>
           <%= hidden_field_tag(:product_id, @product.id) %>
           <%= render partial: "shared/stripe_checkout_button" %>
           <% end %>

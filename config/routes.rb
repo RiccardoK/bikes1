@@ -29,18 +29,18 @@ devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' 
   resources :products do
   resources :comments
   end
-  
+   resources :orders
   resources :users
   resources :payments
-  
+
   get 'static_pages/about'
   get 'static_pages/contact'
   get 'static_pages/index'
   post 'static_pages/thank_you'
   post 'payments/create'
   get 'payments/create'
-
-  resources :orders
+  get 'products/index'
+ # get '/products/:id', to: 'products#show'
 
   # default route
   # may go away in future versions of Rails
