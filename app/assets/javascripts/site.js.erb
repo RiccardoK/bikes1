@@ -5,6 +5,7 @@ $(document).on('turbolinks:load', function(){
     starOn: '<%= asset_path 'star-on.png' %>',
     scoreName: 'comment[rating]'
   });
+  $('.img-zoom').elevateZoom();
 
   $('.rated').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',

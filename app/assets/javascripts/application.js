@@ -14,7 +14,8 @@
 //= require turbolinks
 //= require jquery3
 //= require_tree .
-
+//= require jquery
+//= require jquery_ujs
 
 /**
  * This object controls the nav bar. Implement the add and remove
