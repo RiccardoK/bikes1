@@ -13,7 +13,7 @@ class PaymentsController < ApplicationController
                 description: params[:stripeEmail],
                 receipt_email: @user.email
             )
-
+          
             if charge.paid
                 Order.create(
                     product_id: @product.id,
@@ -22,7 +22,7 @@ class PaymentsController < ApplicationController
                 )
             end
 
-    flash[:success] = "Your payment was processed successfully"
+    flash[:notice] = "Your payment was processed successfully"
 
         rescue Stripe::CardError => e
             body = e.json_body

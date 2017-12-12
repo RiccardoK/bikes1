@@ -4,11 +4,9 @@
   <div class="row product_show" data-product-id="<%= @product.id %>">
 
     <div class="col-md-4 col-xs-12 ">
-      <%= 
-         if (@product.image_url != nil)
-          image_tag(@product.image_url, class: "img-responsive product img-zoom", height: '350', width: '350', data_zoom_images:"/assets/"+@product.image_url) 
-         end
-          %>
+      <% if @product.image_url.present? %>
+  <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
+  <% end %>
     </div>
 
       <div class="caption col-md-8 col-xs-12 product_show_description">
