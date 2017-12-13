@@ -62,7 +62,7 @@ end
 
 ruby "2.3.3"
 
-
+gem 'dalli'
   gem 'devise'
 
 gem 'hirb'
