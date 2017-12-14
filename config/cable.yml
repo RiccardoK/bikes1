@@ -5,6 +5,6 @@ test:
   adapter: async
 
 production:
-  adapter: redis
-  url: redis://localhost:6379/1
+  adapter: postgresql
+  url: postgres://qskuhmqvctrqda:364557e7e10379b8b150bc4554eaffb9b8da8a352957582f848e2512ed9327e9@ec2-54-221-212-208.compute-1.amazonaws.com:5432/d6du2qk79p1oit
   channel_prefix: bikes_production
