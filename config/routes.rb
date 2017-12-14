@@ -40,6 +40,8 @@ devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' 
   post 'payments/create'
   get 'payments/create'
   get 'products/index'
+  mount ActionCable.server => '/cable'
+
  # get '/products/:id', to: 'products#show'
 
   # default route

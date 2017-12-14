@@ -13,6 +13,14 @@ class Product < ApplicationRecord
   end
 
 
+
+  def views
+    $redis.get("product:#{id}") # this is equivalent to 'GET product:1'
+  end
+
+
+
+
 def highest_rating_comment
   comments.rating_desc.first
 end

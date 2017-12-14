@@ -13,10 +13,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery3
-//= require_tree .
-//= require jquery
+//= require jquery.raty.js
+//= require_tree 
 //= require jquery_ujs
-
 /**
  * This object controls the nav bar. Implement the add and remove
  * action over the elements of the nav bar that we want to change.
