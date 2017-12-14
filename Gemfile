@@ -63,7 +63,8 @@ end
 ruby "2.3.3"
 gem 'connection_pool'
 gem 'dalli'
-  gem 'devise'
+gem 'devise'
+gem 'redis-rails'
 
 gem 'hirb'
 

@@ -28,7 +28,7 @@
       <p>
         <%= truncate(product.description, :length => 20) %>
       </p>
-      <%end%>
+    <%end%>
 
       <%= link_to 'Show more', product , class: "btn btn-default" %>
       <% if current_user && current_user.admin? %>
