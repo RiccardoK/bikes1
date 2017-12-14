@@ -14,11 +14,4 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery.raty.js
-//= require_tree 
-//= require jquery_ujs
-/**
- * This object controls the nav bar. Implement the add and remove
- * action over the elements of the nav bar that we want to change.
- *
- * @type {{flagAdd: boolean, elements: string[], add: Function, remove: Function}}
- */
+//= require_tree .
