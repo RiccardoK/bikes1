@@ -101,7 +101,6 @@ config.cache_store = :dalli_store,
                     }
 
 
-
 config.action_mailer.default_url_options = { :host => 'https://bikesdemo.herokuapp.com/'}
 # config.web_socket_server_url = "wss://https://https://bikesdemo.herokuapp.com//cable"
 end
