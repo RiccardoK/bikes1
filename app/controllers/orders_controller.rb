@@ -1,26 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
 
-
-#  def index
-#   end
-
-#   def show
-#   end
-
-#   def new
-#   end
-
-#   def create
-#   end
-
-#   def destroy
-#   end
-
-# end
-
-
-
   # GET /orders
   # GET /orders.json
    def index
@@ -42,7 +22,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-  @order = Order.new(order_params)
+    @order = Order.new(order_params)
 
     respond_to do |format|
       if @order.save
@@ -77,7 +57,7 @@ class OrdersController < ApplicationController
       @order.destroy
     end
     redirect_to root_url
-  end
+end
 
 
 private
