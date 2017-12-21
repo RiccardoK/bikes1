@@ -42,7 +42,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
+  @order = Order.new(order_params)
 
     respond_to do |format|
       if @order.save
@@ -77,7 +77,7 @@ class OrdersController < ApplicationController
       @order.destroy
     end
     redirect_to root_url
-end
+  end
 
 
 private
