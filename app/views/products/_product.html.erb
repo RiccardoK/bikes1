@@ -1,6 +1,7 @@
 <div class="col-sm-4 col-md-4">
   <div class="one-prod">
     <% cache product do %> 
+<<<<<<< HEAD
     <h3 class="prod-name">
       <%= link_to product.name , product %>
     </h3>
@@ -9,10 +10,24 @@
     <p> Id: #<%= product.id %></p>
     <p>Color : <%= product.color %></p>
     <!--
+=======
+      <h3 class="prod-name">
+        <%= link_to product.name , product %>
+      </h3>
+      <hr>
+      <%= link_to image_tag(product.image_url, alt: "image", class: "img-responsive"),product unless product.image_url.blank? %>
+      
+      <!--<p> Id: #<%= product.id %></p>-->
+
+
+      <p>Color : <%= product.color %></p>
+      <!--
+>>>>>>> 614_fin_work
       <p>
         <%= product.created_at %>
       </p>
       -->
+<<<<<<< HEAD
     <p class="price">
       <strong>Price: </strong> <%= product.price %>
     </p>
@@ -27,6 +42,17 @@
     <% if current_user && current_user.admin? %>
       <%= link_to 'Edit', edit_product_path(product) , class: "btn btn-default"  %>
       <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"  %>
+=======
+      <p class="price">
+        <strong>Price:</strong><%= product.price %>
+      </p>
+      <h4>
+        Details :
+      </h4>
+      <p>
+        <%= truncate(product.description, :length => 20) %>
+      </p>
+>>>>>>> 614_fin_work
     <%end%>
   </div>
 </div>
