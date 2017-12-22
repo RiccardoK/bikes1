@@ -8,7 +8,7 @@
       <hr>
       <%= link_to image_tag(product.image_url, alt: "image", class: "img-responsive"),product unless product.image_url.blank? %>
       
-      <p> Id: #<%= product.id %></p>
+      <!--<p> Id: #<%= product.id %></p>-->
 
 
       <p>Color : <%= product.color %></p>
@@ -18,7 +18,7 @@
       </p>
       -->
       <p class="price">
-        <strong>Price: </strong> <%= product.price %>
+        <strong>Price:</strong><%= product.price %>
       </p>
       <h4>
         Details :
