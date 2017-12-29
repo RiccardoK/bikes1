@@ -1,16 +1,44 @@
-<p id="notice"><%= notice %></p>
+<div ng-controller="OrdersCtrl">
+  <h1>Orders</h1>
 
-<h1>Orders</h1>
+  <form class="form-inline" ng-submit="addOrder()">
+    <strong>Add order: </strong>
 
+    <input type="number" step="0.01" ng-model="newOrder.total" class="form-control" placeholder="Total">
 
+    <select ng-model="newOrder.product_id" class="form-control">
+      <option value="" disabled selected>Select a product</option>
+      <option ng-repeat="product in products" value="{{product.id}}">{{product.name}}</option>
+    </select>
+    <!-- <input type="number" ng-model="newOrder.user_id"> -->
 
-<div class="container-fluid">
-  <div class="row">
-     <% cache @orders do %>
-      <%= render @orders %>
-    <% end %>
-  </div>
-</div>
+    <input type="submit" value="+" class="btn btn-success">
+  </form>
 
+  <table class="table table-hover">
+    <thead>
+      <td>Order ID</td>
+      <td>Total</td>
+      <td>Product</td>
+      <td></td>
+    </thead>
+    <tbody>
+      <tr ng-repeat="order in orders | orderBy:'-id':reverse">
+        <td>
+          {{order.id}}
+        </td>
+        <td>
+          <strong>{{order.total | currency}}</strong>
+        </td>
+        <td>
+          {{order.product.name}}
+          <small ng-show="order.user.email" class="text-muted"><br>-{{order.user.email}}</small>
+        </td>
+        <td>
+          <button ng-click="deleteOrder(order)" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-  <button type="button" class="new_order" data-toggle="tooltip"  title="New Order"><%= link_to 'New Order', new_order_path %></button>
+</div> <!-- ng-controller -->
