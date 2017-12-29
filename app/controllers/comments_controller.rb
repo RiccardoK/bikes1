@@ -1,9 +1,10 @@
 class CommentsController < ApplicationController
-    def create
-        @product = Product.find(params[:product_id])
+  def create
+    @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
     @user = current_user
+
     respond_to do |format|
       if @comment.save
         # ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
@@ -19,13 +20,15 @@ class CommentsController < ApplicationController
   end 
   
     def destroy
-    @comment = Comment.find(params[:id])
-    product = @comment.product
-    @comment.destroy
-    redirect_to product 
-  end
+        @comment = Comment.find(params[:id])
+        product = @comment.product
+        @comment.destroy
+        redirect_to product 
+    end
+
     private
+
     def comment_params
-    params.require(:comment).permit( :body, :rating)
-  end
+        params.require(:comment).permit( :body, :rating)
+    end
 end
